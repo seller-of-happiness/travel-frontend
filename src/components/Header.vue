@@ -1,6 +1,6 @@
 <template>
   <header
-    class="flex items-center justify-between px-10 py-3 border-b border-solid"
+    class="flex items-center justify-between px-5 md:px-10 py-3 border-b border-solid"
     :class="borderClass"
   >
     <router-link to="/">
@@ -14,7 +14,7 @@
         to="/"
         class="text-sm font-medium leading-normal"
         :class="textClass"
-        >Главная</router-link
+        >Маршруты</router-link
       >
       <ThemeSwitcher />
     </div>

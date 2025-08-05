@@ -15,4 +15,12 @@ const routes = [
 export const router = createRouter({
   history: createWebHistory(),
   routes,
+  scrollBehavior(to, from, savedPosition) {
+    // при навигации назад/вперёд возвращаем сохранённую позицию
+    if (savedPosition) {
+      return savedPosition;
+    }
+    // в остальных случаях – всегда скролл на самую верхнюю позицию
+    return { top: 0 };
+  },
 });
